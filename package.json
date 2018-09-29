@@ -1,0 +1,25 @@
+{
+  "name": "intro-plugin",
+  "version": "1.0.0",
+  "description": "This a plugin of introduce website",
+  "main": "index.js",
+  "repository": "https://github.com/Yangfan2016/intro-plugin",
+  "author": "yangfan2016 <15234408101@163.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "tsc:init":"tsc --init",
+    "clean:dist":"rm -rf dist/",
+    "clean:pak":"rm -rf node_modules/"
+  },
+  "devDependencies": {
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "ts-loader": "^5.1.1",
+    "typescript":"^3.1.1"
+  }
+}

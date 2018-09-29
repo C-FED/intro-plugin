@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="./src/static/css/main.css">
+    <style>
+        .item {
+            height: 300px;
+            margin: 10px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="item" data-step="1" data-intro="为了更好地推荐成果、学者、群组，请您填写基本信息！">
+            啦啦啦啦
+        </div>
+        <div class="item" data-step="2" data-intro="为了更好地推荐成果、学者、群组，请您填写基本信息！">
+            啦啦啦啦
+        </div>
+        <div class="item" data-step="3" data-intro="为了更好地推荐成果、学者、群组，请您填写基本信息！">
+            啦啦啦啦
+        </div>
+        <div class="item" data-step="4" data-intro="为了更好地推荐成果、学者、群组，请您填写基本信息！">
+            啦啦啦啦
+        </div>
+    </div>
+    <script src="./dist/Intro.min.js"></script>
+    <script>
+        // history.scrollRestoration = 'manual';
+        let intro=new Intro("#app",{
+            refreshToTop:true
+        });
+    </script>
+</body>
+
+</html>

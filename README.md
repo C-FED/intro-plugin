@@ -1,121 +1,51 @@
-# intro-plugin
+## intro-plugin ![NPM version](https://img.shields.io/npm/v/intro-plugin.svg?style=flat)
+
 This a plugin of introduce website
 
-#### 引入
-
-```html
-<script src="/intro.ood.js"></script>
-``` 
-
-#### 标记引导的顺序和数据
-
-```html
-<div data-step="1" 
-     data-required="true"  
-     data-intro="为了更好地推荐成果、学者、群组，请您填写基本信息！">
-     ......
-</div>
+### Installation
+```bash
+$ npm install intro-plugin
 ```
 
-#### 初始化
-
+### Example
 ```js
-var intro = introJS.init("#detailVm", {
-    except: ["#leftNav", "#okms_top"]
-});
+var introPlugin = require('intro-plugin');
 ```
 
-#### 自适应
+### API
+check this file: `index.js`
 
-```js
-intro.resize()
-```
+### Contributing
+- Fork this Repo first
+- Clone your Repo
+- Install dependencies by `$ npm install`
+- Checkout a feature branch
+- Feel free to add your features
+- Make sure your features are fully tested
+- Publish your local branch, Open a pull request
+- Enjoy hacking <3
 
-#### 下一步
+### MIT license
+Copyright (c) 2018 yangfan2016 &lt;15234408101@163.com&gt;
 
-```js
-intro.next()
-```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-#### HTMLAttr
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-<table>
-    <thead>
-        <tr>
-            <th>属性</th>
-            <th>类型</th>
-            <th>备注</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>data-step</td>
-            <td>Number</td>
-            <td>引导的顺序，从1开始计数</td>
-        </tr>
-        <tr>
-            <td>data-intro</td>
-            <td>String</td>
-            <td>提示的信息</td>
-        </tr>
-        <tr>
-            <td>data-required</td>
-            <td>Boolean</td>
-            <td>是否是必须项</td>
-        </tr>
-    </tbody>
-</table>
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
-#### Attributes
-
-<table>
-    <thead>
-        <tr>
-            <th>属性</th>
-            <th>类型</th>
-            <th>备注</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>el</td>
-            <td>String</td>
-            <td>selector 引导页遮罩的容器</td>
-        </tr>
-        <tr>
-            <td>config</td>
-            <td>Object</td>
-            <td>{<br/>
-            except:[String selector], // 遮罩白名单  <br/>
-            isCanScroll:false, // 是否可以滚动页面，默认不能 <br/>
-        }</td>
-        </tr>
-    </tbody>
-</table>
-
-#### Methods
-
-<table>
-    <thead>
-        <tr>
-            <th>方法名</th>
-            <th>备注</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>next</td>
-            <td>进行下一步</td>
-        </tr>
-        <tr>
-            <td>resize</td>
-            <td>提示框自适应</td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-#### AUTHOR:Yangfan 
-#### LICENSE:MIT
-
+---
+![docor]()
+built upon love by [docor](https://github.com/turingou/docor.git) v0.3.0
