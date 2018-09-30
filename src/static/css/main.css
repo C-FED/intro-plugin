@@ -85,7 +85,7 @@
     cursor:pointer;
 }
 .intro-tip-trangle{
-    content: ;
+    content: '';
     position: absolute;
     border:5px solid #fff;
 }

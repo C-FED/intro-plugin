@@ -5,6 +5,7 @@ import {
     _getDOM,
     _each
 } from "./utils/helpers";
+import "./static/css/main.css";
 
 interface iIntroConfig {
     except: string[],
@@ -144,27 +145,30 @@ export class Intro {
         this.addDomData["referenceLayer"] = Utils.referenceLayer;
 
         // default to step 1
-        this.next(0);
+        this.next(1);
         // resize
         window.addEventListener("resize", () => {
             this.resize();
         }, false);
     }
     // next
-    next(): Intro
-    next(index: number): Intro
-    next(index?: number): Intro {
+    next():void
+    next(index: number):void
+    next(index?: number):void {
         if (typeof index != "undefined") {
+            index--; // 1->0
             if (this.prevIndex != index) {
                 this.eq = index;
-                this.prevIndex = index;
             } else {
-                return this;
+                return;
             }
         }
         if (this.isEnd) {
-            return this;
+            return;
         }
+        // cache prev index
+        this.prevIndex = this.eq;
+        
         this.eq = this.eq >= this.queues.length ? -1 : this.eq;
 
         this.currentDom = this.queues[this.eq] || this.queues[0]; // eq 0  data-step 0
@@ -194,8 +198,6 @@ export class Intro {
                 });
             }, 0);
         }
-
-        return this;
     }
     // destory
     destory() {
